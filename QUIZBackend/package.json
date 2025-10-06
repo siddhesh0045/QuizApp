@@ -1,11 +1,11 @@
 {
-  "name": "quizapp-monorepo",
+  "name": "quizapp-backend",
   "version": "1.0.0",
-  "description": "QuizApp backend and frontend monorepo",
-  "main": "QUIZBackend/index.js", 
+  "description": "QuizApp backend",
+  "main": "server.js",
   "scripts": {
-    "start": "node /server.js",
-    "dev": "nodemon /server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.4",

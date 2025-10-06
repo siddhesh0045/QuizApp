@@ -4,8 +4,8 @@
   "description": "QuizApp backend and frontend monorepo",
   "main": "QUIZBackend/index.js", 
   "scripts": {
-    "start": "node QUIZBackend/server.js",
-    "dev": "nodemon QUIZBackend/server.js"
+    "start": "node /server.js",
+    "dev": "nodemon /server.js"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.4",

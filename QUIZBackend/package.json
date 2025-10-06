@@ -1,0 +1,27 @@
+{
+  "name": "quizapp-monorepo",
+  "version": "1.0.0",
+  "description": "QuizApp backend and frontend monorepo",
+  "main": "QUIZBackend/index.js", 
+  "scripts": {
+    "start": "node QUIZBackend/index.js",
+    "dev": "nodemon QUIZBackend/index.js"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.4",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.3",
+    "morgan": "^1.10.1",
+    "path": "^0.12.7",
+    "uuid": "^8.3.2"
+  },
+  "author": "Siddheshwar Ghuge",
+  "license": "ISC"
+}

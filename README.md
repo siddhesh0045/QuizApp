@@ -1,8 +1,8 @@
 
 # Online Quiz Application
 
-**Deployed Link:** https://quizappsidd.onrender.com/
-
+**Deployed Link:** https://quizappsidd.onrender.com/ (Under development Till:6-10-2025 11.30PM after that anyone can use the link)
+   deployed using render  free version so at initial it takes 2 to 5 seconds - wake up time)
 ---
 
 ## 1. Project Description
@@ -24,16 +24,14 @@ Admins have a separate login to manage users and quizzes (*TBD*).
 
 ### Backend:  
 - MongoDB stores quizzes, users, feedback, and quiz results.  
-- Questions stored with text, options, and correct answers (correct answers are **hidden** in fetch endpoint).  
-- Endpoints implemented:  
-  - `/quiz/:id/questions` – fetch questions without exposing correct answers.  
-  - `/quiz/:id/submit` – takes user answers, calculates the score, and returns it immediately.  
+- Questions stored with text, options, and correct answers.
+- Endpoints implemented. 
 
 ### Frontend:  
 - Start page allows the user to begin a quiz.  
 - Displays **one question at a time** with "Next" and "Previous" buttons.  
-- "Submit" button on the final question sends all answers to the backend.  
-- Result page displays the user's score and correct answers.  
+- "next" button on the final question sends all answers to the backend.  
+- Result page displays the user's score and correct answers and selected answers.  
 
 ### Evaluation Criteria Addressed:  
 - Full end-to-end functionality implemented.  
@@ -56,7 +54,7 @@ Admins have a separate login to manage users and quizzes (*TBD*).
 ### User-Related Features  
 - Login / Logout  
 - Register  
-- User Profile management  
+- User Profile  
 
 ### Other Features  
 - Ratings / Feedback submission  
@@ -69,7 +67,7 @@ Admins have a separate login to manage users and quizzes (*TBD*).
 - JWT authentication with HttpOnly cookies ensures secure sessions.  
 - Correct answers are stored in DB but never exposed in question fetch.  
 - Frontend shows **one question at a time** with "Next" / "Previous" navigation.  
-- "Submit" button sends all answers at once for scoring.  
+- "next" button at last question sends all answers at once for scoring.  
 - Challenge friend and feedback submission are additional features.  
 
 ---
@@ -90,8 +88,7 @@ cd QuizApp
 
 2. **Backend Setup**
 
-ver.js
-
+   
 ```bash
 cd QUIZBackend
 npm install

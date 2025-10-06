@@ -16,13 +16,18 @@ connectDB();
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
+// app.use(
+//   cors({
+//     origin: "http://localhost:5173", // frontend URL
+//     credentials: true,
+//   })
+// );
 app.use(
   cors({
-    origin: "http://localhost:5173", // frontend URL
-    credentials: true,
+    origin: "https://quizappsidd.onrender.com", //  live frontend
+    credentials: true, // allows cookies
   })
 );
-
 
 // Routes
 app.use("/api/auth", authRoute);

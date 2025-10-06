@@ -52,21 +52,19 @@ const registerUser = async (req, res) => {
     const accessToken = generateAccessToken({ id: newUser._id, email: newUser.email, isAdmin: newUser.isAdmin });
     const refreshToken = generateRefreshToken({ id: newUser._id });
 
-    res.cookie("token", accessToken, {
-      httpOnly: true,
-      // secure: process.env.NODE_ENV === "production",
-      secure: false,
-      sameSite: "lax",
-      maxAge: 15 * 60 * 1000, // 15 min
-    });
+  res.cookie("token", accessToken, {
+  httpOnly: true,
+  secure: process.env.NODE_ENV === "production",
+  sameSite: "lax",
+  maxAge: 15 * 60 * 1000,
+});
 
-    res.cookie("refreshToken", refreshToken, {
-      httpOnly: true,
-      // secure: process.env.NODE_ENV === "production",
-       secure: false,
-      sameSite: "lax",
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
-    });
+res.cookie("refreshToken", refreshToken, {
+  httpOnly: true,
+  secure: process.env.NODE_ENV === "production",
+  sameSite: "lax",
+  maxAge: 7 * 24 * 60 * 60 * 1000,
+});
 
     res.status(201).json({
       message: "User registered successfully",
@@ -133,20 +131,34 @@ const loginUser = async (req, res) => {
     //   sameSite: "strict",
     //   maxAge: 15 * 60 * 1000, // 15 min
     // });
-res.cookie("token", accessToken, {
+// res.cookie("token", accessToken, {
+//   httpOnly: true,
+//   secure: false, // keep false for localhost
+//   sameSite: "lax", // use lax, not strict (strict blocks cookies on some navigations)
+//   maxAge: 15 * 60 * 1000,
+// });
+
+//     res.cookie("refreshToken", refreshToken, {
+//       httpOnly: true,
+//       // secure: process.env.NODE_ENV === "production",
+//        secure: false,
+//       sameSite: "lax",
+//       maxAge: 7 * 24 * 60 * 60 * 1000,
+//     });
+    res.cookie("token", accessToken, {
   httpOnly: true,
-  secure: false, // keep false for localhost
-  sameSite: "lax", // use lax, not strict (strict blocks cookies on some navigations)
+  secure: process.env.NODE_ENV === "production",
+  sameSite: "lax",
   maxAge: 15 * 60 * 1000,
 });
 
-    res.cookie("refreshToken", refreshToken, {
-      httpOnly: true,
-      // secure: process.env.NODE_ENV === "production",
-       secure: false,
-      sameSite: "lax",
-      maxAge: 7 * 24 * 60 * 60 * 1000,
-    });
+res.cookie("refreshToken", refreshToken, {
+  httpOnly: true,
+  secure: process.env.NODE_ENV === "production",
+  sameSite: "lax",
+  maxAge: 7 * 24 * 60 * 60 * 1000,
+});
+
 
     res.status(200).json({
       message: "Login successful",

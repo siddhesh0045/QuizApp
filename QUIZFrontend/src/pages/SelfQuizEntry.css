@@ -1,0 +1,179 @@
+.self-quiz-entry {
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8bcf5 0%, #689af6 100%);
+  color: var(--text-light, #ebe7ef);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Heading */
+.self-quiz-entry h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0f0072;
+  text-shadow: 0 0 10px rgba(103, 13, 248, 0.6);
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.filters select {
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(156, 90, 245, 0.5);
+  background-color: #2c203d;
+  color: #ebe7ef;
+  font-weight: 500;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 6 5-6H0z' fill='%23ebe7ef'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 10px 6px;
+  min-width: 160px;
+}
+
+.filters select:hover {
+  background-color: #3a2860;
+  border-color: #9d5af5;
+  box-shadow: 0 0 8px rgba(156, 90, 245, 0.4);
+}
+
+.filters select:focus {
+  outline: none;
+  border-color: #9d5af5;
+  box-shadow: 0 0 12px rgba(156, 90, 245, 0.5);
+}
+
+.filters button {
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #6cb7f5, #9d5af5);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(156, 90, 245, 0.4);
+}
+
+.filters button:hover {
+  background: linear-gradient(90deg, #9d5af5, #6cb7f5);
+  transform: scale(1.05);
+  box-shadow: 0 0 22px rgba(156, 90, 245, 0.6);
+}
+
+/* Quiz list responsive grid */
+.quiz-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+  justify-items: center;
+  padding: 0 1rem;
+}
+
+/* Quiz card */
+.quiz-card {
+  width: 100%;
+  max-width: 350px;
+  background: linear-gradient(180deg, #3e2a60 0%, #321061 100%);
+  border-radius: 16px;
+  padding: 1.8rem 1.2rem;
+  box-shadow: 0 0 15px rgba(156, 90, 245, 0.25);
+  border: 1px solid rgba(156, 90, 245, 0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle glowing animation on hover */
+.quiz-card::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(110, 39, 153, 0.15), transparent 70%);
+  transform: scale(0);
+  transition: transform 0.6s ease;
+  z-index: 0;
+}
+
+.quiz-card:hover::before {
+  transform: scale(1);
+}
+
+.quiz-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0 25px rgba(156, 90, 245, 0.4);
+}
+
+.quiz-card h3 {
+  font-size: 1.3rem;
+  color: #b78bff;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 8px rgba(183, 139, 255, 0.4);
+}
+
+.quiz-card p {
+  color: #c1b2dd;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-card button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #6cb7f5, #9d5af5);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(108, 224, 255, 0.5);
+  z-index: 1;
+  position: relative;
+}
+
+.quiz-card button:hover {
+  background: linear-gradient(90deg, #9d5af5, #6cb7f5);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(156, 90, 245, 0.6);
+}
+
+/* Loader / no quizzes text */
+.self-quiz-entry p {
+  text-align: center;
+  color: #c1b2dd;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .self-quiz-entry h2 {
+    font-size: 1.6rem;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filters select,
+  .filters button {
+    width: 90%;
+  }
+}

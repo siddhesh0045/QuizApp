@@ -1,0 +1,44 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Build output
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+
+# Logs
+*.log
+logs/
+debug.log
+
+# Editor & OS-specific files
+.DS_Store  # macOS
+Thumbs.db  # Windows
+.vscode/   # VS Code settings
+.idea/     # JetBrains IDE settings
+
+# Backend specific
+/uploads/   # If you're storing user-uploaded files
+database.sqlite  # SQLite database
+*.bak  # Backup files
+
+# Git-related
+.gitignore  # Ignore itself in subfolders if needed
+
+# Frontend
+QUIZFrontend/node_modules/
+QUIZFrontend/build/
+
+# Backend
+QUIZBackend/node_modules/
+QUIZBackend/.env
+QUIZBackend/uploads/
+

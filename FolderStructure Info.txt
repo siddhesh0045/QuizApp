@@ -1,0 +1,8 @@
+config/: Holds configurations like database connection and environment variables.
+controllers/: Contains logic for processing requests (separation of concerns from routes).
+middleware/: Custom middleware for authentication, error handling, and more.
+models/: Mongoose schemas for MongoDB collections (e.g., User, Car, Driver).
+routes/: Defines API endpoints for each module (e.g., /api/cars, /api/bookings).
+utils/: Reusable utility functions (e.g., JWT, email sending).
+app.js: Configures Express middleware (body-parser, CORS, etc.) and connects routes.
+server.js: Starts the server on the defined port.

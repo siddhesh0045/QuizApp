@@ -1,0 +1,167 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(180deg,#6b31c1  0%,#2b1046  100%); /* vertical gradient */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid #4b2d7a;
+  color: #f0e9ff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ---------- Left ---------- */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* spacing between logo and left links */
+}
+
+.navbar-left .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #b48efc;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-left .logo:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* ---------- Center ---------- */
+.navbar-center {
+  display: none; /* hide center since we moved those links left */
+}
+
+/* Moved "Admin" and "About Us" into left section style */
+.navbar-left .nav-btn {
+  text-decoration: none;
+  color: #e1d9ff;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-left .nav-btn:hover {
+  color: #b78bff;
+  transform: translateY(-2px);
+}
+
+/* ---------- Right ---------- */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #b48efc;
+  margin-right: 0.5rem;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #e1d9ff;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-btn:hover {
+  color: #b78bff;
+  transform: translateY(-2px);
+}
+
+/* ---------- Logout ---------- */
+.logout-btn {
+  padding: 0.4rem 0.9rem;
+  border: 1px solid #b78bff;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #b78bff;
+  color: #1b0935;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  .navbar-left {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navbar-right {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #e1d9ff;
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-left {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .navbar-right {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .navbar-right.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

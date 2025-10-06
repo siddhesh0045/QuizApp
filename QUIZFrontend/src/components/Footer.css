@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap');
+
+.footer {
+  background: radial-gradient(circle at top, #6d2cb3 0%, #150828 100%);
+  padding: 25px 50px;
+  border-top: 1px solid #9e5ef8;
+  font-family: 'Segoe UI', sans-serif;
+  color: #f6f6f9;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* ---------- Left Side ---------- */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+}
+
+.footer-section {
+  margin-bottom: 15px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #b78bff;
+  margin-bottom: 8px;
+  text-shadow: 0 0 8px rgba(183, 139, 255, 0.4);
+}
+
+.footer-section p,
+.footer-section a {
+  color: #cfc3ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a {
+  margin-right: 5px;
+}
+
+.footer-section a:hover {
+  color: #9e5ef8;
+}
+
+/* ---------- Right Side (Feedback Form) ---------- */
+.footer-right {
+  max-width: 350px;
+  width: 100%;
+}
+
+.footer-section.feedback {
+  background: rgba(38, 19, 65, 0.8);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(142, 80, 255, 0.3);
+}
+
+.footer-section.feedback h3 {
+  color: #b78bff;
+  margin-bottom: 10px;
+}
+
+/* Feedback Form */
+.footer-section.feedback form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-section.feedback textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #9e5ef8;
+  border-radius: 5px;
+  background: #2e1a4d;
+  color: #fafafd;
+  resize: none;
+  height: 80px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+/* Star Rating */
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rating p {
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.star {
+  font-size: 24px;
+  cursor: pointer;
+  color: #6d5c8f;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.star.selected,
+.star:hover {
+  color: #e5930f;
+  transform: scale(1.2);
+}
+
+/* Submit Button */
+.footer-section.feedback button {
+  background-color: #9e5ef8;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.footer-section.feedback button:hover {
+  background-color: #b78bff;
+  box-shadow: 0 0 15px rgba(183, 139, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+/* ---------- Footer Bottom ---------- */
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid #9e5ef8;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ededf0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left {
+    align-items: center;
+  }
+
+  .footer-right {
+    margin-top: 20px;
+  }
+}

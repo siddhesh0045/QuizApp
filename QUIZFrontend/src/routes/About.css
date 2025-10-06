@@ -1,0 +1,96 @@
+.abouPage-about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    margin-bottom: 20px;
+    border: 1px solid #fca816;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 6px #fdba0025;
+    opacity: 0; /* Initial opacity set to 0 */
+    animation: fadeIn 1s forwards; /* Animation definition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    background-color: #a9d6e5;
+    background: radial-gradient(#2e333c, #090a0c);
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%; /* Adjust the width as necessary */
+}
+
+.abouPage-about-container-headings {
+    background: linear-gradient(90deg, #f9572a, #ffc905);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+}
+
+.abouPage-about-container p {
+    font-size: 1.1rem;
+    color: hsl(47, 86%, 86%);
+    align-items: flex-start;
+}
+
+.abouPage-about-container ul {
+    list-style: none;
+    padding: 0;
+    /* width: 40%; */
+    padding: 8px;
+    margin: 15px 0 15px 0; /* Adjusting margins */
+    border: 1px solid #ffc905;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #A9D6E5;
+    background: radial-gradient(#828282, #61636a);
+    color: #000000;
+    text-align: left; /* Align list items to the left */
+}
+
+.abouPage-about-container ul li {
+    font-size: 1rem;
+    background: #f8f9fa;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    color: #353434; /* Change this to your desired color */
+    font-style: italic;
+}
+
+.abouPage-about-container .book-now-btn {
+    padding: 10px;
+    background-color: black;
+    color: white;
+  
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    /* transition: color 0.3s;
+    background: linear-gradient(40deg, #ea00ff, #ea00ff, #03d5ff, #03d5ff);
+    background: linear-gradient(90deg, #f9572a, #ffc905);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px 20px; */
+    border: 0.5px solid white;
+    border-radius: 5px;
+    background-color: rgb(14, 18, 68); /* Set background color for the button */
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.abouPage-about-container .book-now-btn:hover {
+    background-color: #b36d00;
+    color: #000000;
+    transition: background-color 0.3s;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #7a4b00;
+    background-color: #b36d00;
+    color: #000000;
+    transition: background-color 0.3s;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #7a4b00;
+}

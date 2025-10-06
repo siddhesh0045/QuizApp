@@ -1,0 +1,179 @@
+.challenge-result-page {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #1d0433;
+  color: #ebe7ef;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(12, 5, 32, 0.7);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 6px #6cb7f5;
+}
+
+.players {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.player-card {
+  background-color: #3e2a60;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(156, 126, 220, 0.3);
+  width: 150px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.player-card:hover {
+  transform: translateY(-5px);
+}
+
+.player-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #18e0ff;
+}
+
+.player-score {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: #9d5af5;
+}
+
+.player-time {
+  font-size: 0.9rem;
+  color: #c1b2dd;
+}
+
+.winner {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  color: #f55a98;
+  text-shadow: 0 0 5px #f55a98;
+}
+
+.btn-back {
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #6cb7f5, #9d5af5);
+  color: #1d0433;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-back:hover {
+  background: linear-gradient(90deg, #9d5af5, #6cb7f5);
+}
+/* Background wrapper */
+.challenge-result-wrapper {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(135deg, #e8bcf5 0%, #689af6 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Inner card */
+.challenge-result-page {
+  width: 90%;
+  max-width: 900px; /* wider than before */
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #1d0433;
+  color: #ebe7ef;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(12, 5, 32, 0.7);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 6px #6cb7f5;
+}
+
+.players {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.player-card {
+  background-color: #3e2a60;
+  padding: 1.2rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(156, 126, 220, 0.3);
+  width: 220px; /* increased from 150px */
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.player-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(156, 126, 220, 0.5);
+}
+
+.player-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #18e0ff;
+}
+
+.player-score {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: #9d5af5;
+}
+
+.player-time {
+  font-size: 0.95rem;
+  color: #c1b2dd;
+}
+
+.winner {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #f55a98;
+  text-shadow: 0 0 6px #f55a98;
+}
+
+.btn-back {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #6cb7f5, #9d5af5);
+  color: #1d0433;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+  background: linear-gradient(90deg, #9d5af5, #6cb7f5);
+  box-shadow: 0 0 15px rgba(157, 90, 245, 0.5);
+}

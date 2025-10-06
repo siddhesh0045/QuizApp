@@ -1,0 +1,70 @@
+.profile-page {
+  min-height: calc(100vh - 80px);
+  padding: 2rem;
+  background: linear-gradient(135deg, #e8bcf5 0%, #689af6 100%);
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-page h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0f0072;
+  text-shadow: 0 0 10px rgba(103, 13, 248, 0.6);
+}
+
+.profile-info {
+  background: rgba(29, 4, 51, 0.85);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(156, 90, 245, 0.3);
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.profile-info p {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: #ebe7ef;
+}
+
+.quiz-history {
+  background: rgba(29, 4, 51, 0.85);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(156, 90, 245, 0.3);
+  width: 100%;
+  max-width: 800px;
+}
+
+.quiz-history h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #6cb7f5;
+  text-shadow: 0 0 8px #9d5af5;
+}
+
+.quiz-history table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.quiz-history th,
+.quiz-history td {
+  padding: 0.6rem 1rem;
+  border: 1px solid rgba(156, 90, 245, 0.4);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.quiz-history th {
+  background: rgba(108, 183, 245, 0.2);
+}
+
+.quiz-history tr:hover {
+  background: rgba(156, 90, 245, 0.15);
+}

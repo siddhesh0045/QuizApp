@@ -1,0 +1,100 @@
+.quiz-type-container {
+  text-align: center;
+  padding: 3rem 1rem;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #1d0433 0%, #321061 100%);
+  background: linear-gradient(135deg, #e8bcf5 0%, #689af6 100%);
+  color: var(--text-light, #ebe7ef);
+}
+
+.quiz-type-container h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  color: var(--accent-blue, #6cb7f5);
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(108, 183, 245, 0.4);
+  letter-spacing: 1px;
+    color: #0f0072;
+   text-shadow: 0 0 10px rgba(103, 13, 248, 0.6);
+}
+
+.quiz-type-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.quiz-card {
+  background: linear-gradient(180deg, #4e3b6d 0%, #06000f 100%);
+ 
+  box-shadow: 0 0 15px rgba(156, 122, 245, 0.25);
+  width: 300px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 10px solid rgb(246, 246, 246);
+   border-radius: 1px;
+}
+
+.quiz-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 25px rgba(156, 90, 245, 0.45);
+}
+
+.quiz-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 6px rgba(168, 215, 253, 0.5));
+  border: 1px solid #fdfdfd00 ;
+  border-radius: 4px;
+}
+
+.quiz-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  color: var(--accent-purple, #9d5af5);
+  font-weight: 600;
+}
+
+.quiz-card p {
+  font-size: 1rem;
+  color: var(--text-soft, #c1b2dd);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.quiz-card button {
+  background: linear-gradient(90deg, #6cb7f5, #9d5af5);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(156, 90, 245, 0.4);
+}
+
+.quiz-card button:hover {
+  background: linear-gradient(90deg, #9d5af5, #6cb7f5);
+  box-shadow: 0 0 18px rgba(156, 90, 245, 0.6);
+  transform: scale(1.05);
+}
+
+
+.quiz-card {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.quiz-card:nth-child(1) { animation-delay: 0.1s; }
+.quiz-card:nth-child(2) { animation-delay: 0.25s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}

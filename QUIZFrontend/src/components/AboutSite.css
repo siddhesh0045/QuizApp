@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap'); /* Importing the Segoe UI font */
+.aboutWebsite-container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', sans-serif;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    animation: fadeIn 1s forwards; /* Optional: add fade-in animation */
+}
+
+.aboutWebsite-text {
+    text-align: justify; /* Justify paragraph text */
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+.aboutWebsite-text h2 {
+    font-size: 24px;
+    color: #000; /* Initial text color */
+    text-align: center; /* Center the heading */
+    margin-bottom: 10px;
+    animation: bounceAndFade 2s infinite;
+    position: relative;
+    padding: 10px;
+    background: linear-gradient(40deg, #ea00ff, #ea00ff, #03d5ff, #03d5ff);
+    border-radius: 10px;
+}
+
+.aboutWebsite-text h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    padding: 5px; /* Adjust padding to create space for the border */
+    color: #000; /* Initial text color */
+    background: linear-gradient(40deg,#a0371a, #f9572a, #e6ff05,#f8ffb8);
+    background-size: 300% 300%;
+    animation: borderAnimation 5s infinite;
+    z-index: -1;
+}
+
+@keyframes borderAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes bounceAndFade {
+    0%, 100% {
+        transform: translateY(0);
+       
+    }
+    50% {
+        transform: translateY(-10px);
+        
+    }
+}
+
+.aboutWebsite-paragraph {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.aboutWebsite-image {
+    width: 50%; /* Adjust the width of the image */
+    height: auto;
+    margin: 0 auto; /* Center the image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.aboutWebsite-image:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+/* Optional: Add a fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

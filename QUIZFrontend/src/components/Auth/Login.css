@@ -1,0 +1,188 @@
+/* src/components/Login.css */
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap'); /* Importing the Segoe UI font */
+.login-container {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align the form to the left */
+  background: radial-gradient(#464444, #21242b,#000000);
+  color:white;
+  padding-top: 5px;
+  padding-bottom: 5px; /* Add some padding to space out from top */
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.login-container h1 {
+  text-align: center; /* Center the login heading */
+  margin-bottom: 20px;
+  color: #ffc905;
+}
+.login-container p {
+  color: #ffc905;
+}
+.error-message-error {
+  color: #fc0303;
+  margin-bottom: 10px;
+  opacity: 1; /* Initially hidden */
+  transition: opacity 0.3s ease, color 0.3s ease 0.3s; /* Transition with delay */
+}
+
+.error-message-noError {
+  color: #f8f7f5;
+  margin-bottom: 10px;
+  opacity: 1; /* Initially hidden */
+  transition: opacity 0.3s ease, color 0.3s ease 0.3s; /* Transition with delay */
+}
+
+.error-message-noError.visible {
+  opacity: 0; /* Make it visible */
+}
+form {
+  background: radial-gradient(#555353, #282b34,#232323);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  color: #03d5ff;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  display: flex;
+  align-items: center;
+  color: #ffc905;
+}
+
+.form-group label i {
+  margin-right:3px;
+}
+
+.form-group input {
+  width: 85%;
+  margin-left: 2%;
+  border: 1px solid #ffc905;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #A9D6E5;
+  background: radial-gradient(#828282, #61636a);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #eaeae1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #e6e9e7;
+}
+.signup-link {
+  background: none;
+  color: #00ff66;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.signup-link:hover {
+  color: #a9b8c9;
+}
+.login-container button {
+  padding: 10px;
+  cursor: pointer;
+  border: 0.5px solid white;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.login-container button:hover {
+  background-color: #b36d00;
+  color: #000000;
+  transition: background-color 0.3s;
+  border: 1px solid #7a4b00;
+
+}
+/* Define the fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+
+
+
+.login-container.welcome button {
+  opacity: 0;
+  animation: fadeIn 0.7s ease-in-out 0.7s forwards;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.password-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.password-container input {
+  margin-left: 0%;
+  width: 90%;
+  border: 1px solid #ffc905;
+}
+
+.password-container i {
+  cursor: pointer;
+  padding: 2px;
+  color: #666;
+}
+
+.Admin-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Adjust this as needed */
+}
+
+.loading-message {
+  background: radial-gradient(#828282, #61636a);
+  border: 1px solid #ffc905;
+  color: #000000;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  text-align: center;
+}

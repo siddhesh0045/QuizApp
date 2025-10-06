@@ -1,0 +1,197 @@
+/* /* src/components/Main.css
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.top-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.carousel-container {
+    flex: 1;
+    margin-right: 20px;
+    max-width: 60%;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    animation: scroll 10s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.login-container {
+    flex: 1;
+    max-width: 35%;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container label {
+    margin-bottom: 10px;
+}
+
+.login-container input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-container button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+.about-container {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* src/components/Main.css */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: whi;
+    /* background-color: #000000; */
+}
+
+.top-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.slideshow-container {
+    flex: 1;
+    margin-right: 20px;
+    border: 1px solid black;
+    max-width: 50%; /* Adjust this value to control image size */
+    position: relative; /* Position relative for absolute positioning of images */
+    border-radius: 15px; /* Added border-radius for smoother corners */
+    overflow: hidden; /* Ensure the border-radius is applied to the children elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    
+}
+
+.slideshow-image {
+    width: 100%;
+    height: 100%; /* Set a fixed height for the images */
+    object-fit: cover; /* Maintain aspect ratio while covering container */
+    position: absolute; /* Absolutely position images */
+    top: 0;
+    left: 0;
+    opacity: 0; /* Start with the image hidden */
+    transition: opacity 1s; /* Smooth transition for image change */
+    transition: all 0.5s ease-in-out;
+    border-radius: 15px; /* Ensure images also have the border-radius */
+}
+
+.slideshow-image.visible {
+    opacity: 1; /* Show the image when it becomes visible */
+}
+
+.login-container {
+    flex: 1;
+    max-width: 35%;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container label {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #333;
+}
+
+.login-container input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.login-container button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+.about-container {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slideshow-container, .login-container {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .slideshow-container {
+        margin-bottom: 20px;
+    }
+}

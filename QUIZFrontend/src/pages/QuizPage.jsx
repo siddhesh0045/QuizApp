@@ -18,7 +18,7 @@ const QuizPage = () => {
       try {
         const res = await api.get(`/quiz/${id}`);
         setQuiz(res.data.quiz);
-        console.log("this is the quiz",res.data.quiz);
+     //   console.log("this is the quiz",res.data.quiz);
       } catch (err) {
         console.error("Error fetching quiz:", err);
         alert("Failed to fetch quiz");

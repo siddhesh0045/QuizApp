@@ -21,7 +21,7 @@ const QuizResultPage = () => {
     const saveResult = async () => {
       try {
         await api.post("/auth/updateResult", { quizId: id, score });
-        console.log(" Quiz result saved successfully");
+      //  console.log(" Quiz result saved successfully");
       } catch (err) {
         console.error(" Error saving quiz result:", err);
       }

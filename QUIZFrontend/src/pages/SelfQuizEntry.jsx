@@ -17,10 +17,10 @@ const fetchQuizzes = async (filters = {}) => {
   setLoading(true);
   try {
     const res = await api.get("/quiz/", { params: filters });
-    console.log(res.data);
+   // console.log(res.data);
     setQuizzes(Array.isArray(res.data.quizzes) ? res.data.quizzes : []);
   } catch (err) {
-    console.error("Error fetching quizzes:", err);
+    //console.error("Error fetching quizzes:", err);
     setQuizzes([]); // clear list on error
   } finally {
     setLoading(false);

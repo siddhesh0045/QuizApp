@@ -90,6 +90,8 @@ cd QuizApp
 
 2. **Backend Setup**
 
+ver.js
+
 ```bash
 cd QUIZBackend
 npm install
@@ -100,7 +102,7 @@ cp .env.example .env  # update environment variables as needed
 # MONGO_URI=<your-mongodb-uri>
 # NODE_ENV=development/ production
 # PORT=5000
-npm run dev            # starts backend on localhost
+ node ./server.js           # starts backend on localhost
 ```
 
 3. **Frontend Setup**
@@ -110,7 +112,14 @@ cd ../QUIZFrontend
 npm install
 npm run dev            # starts frontend on localhost
 ```
+## ⚙️ Local Setup Notes
 
+Before running locally, make sure to:
+
+- In **`server.js`**, comment out the deployed CORS link and **uncomment the localhost CORS link**.
+- In **`frontend/src/utils/api.js`**, change the deployed API base URL to `http://localhost:5000`.
+
+- In case any issue that can occures is likely due to the tokens generation ( for dev in authcontroller you can checkout token related code)
 4. Open `http://localhost:5173` in your browser to access the application.
 
 

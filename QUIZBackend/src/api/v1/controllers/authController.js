@@ -129,15 +129,34 @@ const loginAdmin = async (req, res) => {
 
 // ------------------ Logout ------------------
 const logoutUser = (req, res) => {
-  res.clearCookie("token");
-  res.clearCookie("refreshToken");
-  res.status(200).json({ message: "User logged out successfully" });
+  // Clear access token
+  res.clearCookie("token", {
+    httpOnly: true,
+    secure: isProd,
+    sameSite: isProd ? "none" : "lax",
+  });
+
+  // Clear refresh token
+  res.clearCookie("refreshToken", {
+    httpOnly: true,
+    secure: isProd,
+    sameSite: isProd ? "none" : "lax",
+  });
+
+  return res.status(200).json({ message: "User logged out successfully" });
 };
 
+// Admin logout
 const adminLogout = (req, res) => {
-  res.clearCookie("tokenAdmin");
-  res.status(200).json({ message: "Admin logged out successfully" });
+  res.clearCookie("tokenAdmin", {
+    httpOnly: true,
+    secure: isProd,
+    sameSite: isProd ? "none" : "lax",
+  });
+
+  return res.status(200).json({ message: "Admin logged out successfully" });
 };
+
 
 // ------------------ Get Me ------------------
 const getMe = async (req, res) => {

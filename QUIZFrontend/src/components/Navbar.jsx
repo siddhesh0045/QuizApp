@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
       <div className="navbar-loading">
         <div className="loader"></div>
-        <p>Loading navbar, please wait...</p>
+        <p>Loading, please wait...</p>
       </div>
     );
   }

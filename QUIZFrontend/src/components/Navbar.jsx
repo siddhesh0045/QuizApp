@@ -1,4 +1,3 @@
-
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useState } from "react";
@@ -15,7 +14,15 @@ const Navbar = () => {
     navigate("/login");
   };
 
-  if (loading) return null;
+
+  if (loading) {
+    return (
+      <div className="navbar-loading">
+        <div className="loader"></div>
+        <p>Loading navbar, please wait...</p>
+      </div>
+    );
+  }
 
   const params = new URLSearchParams(location.search);
   const redirect = params.get("redirect")
@@ -27,6 +34,7 @@ const Navbar = () => {
       <div className="navbar-left">
         <Link to="/" className="logo">QuizApp</Link>
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <Link to="/" className="nav-btn">Home</Link>
           <Link to="/admin" className="nav-btn">Admin</Link>
           <Link to="/aboutUs" className="nav-btn">About Us</Link>
         </div>

@@ -19,7 +19,7 @@
 }
 
 .quiz-page p {
-  color: var(--text-soft, #c1b2dd);
+  color: var(--text-soft, #350293);
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -53,7 +53,7 @@
 
 .options button:hover {
   background: linear-gradient(90deg, var(--accent-blue, #6cb7f5), var(--accent-purple, #9d5af5));
-  color: #fff;
+  color: #ffffff;
   box-shadow: 0 0 10px rgba(156, 90, 245, 0.6);
   transform: scale(1.03);
 }

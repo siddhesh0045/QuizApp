@@ -1,10 +1,14 @@
-
-
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from "../context/AuthContext";
 import "./Profile.css";
 
 const Profile = () => {
+  const navigate = useNavigate();
   const { user } = useAuth();
+
+  const handleSubmit = () => {
+    navigate("/");
+  };
 
   return (
     <div className="profile-page">
@@ -13,8 +17,8 @@ const Profile = () => {
       <div className="profile-info">
         <p><strong>Name:</strong> {user.name}</p>
         <p><strong>Email:</strong> {user.email}</p>
-        <p><strong>Rank:</strong> {user.rank || "Not Ranked Yet"}</p>
-        <p><strong>Points:</strong> {user.points || 0}</p>
+        <p><strong>Rank:</strong> {user.rank || "Not Implemented Yet"}</p>
+        <p><strong>Points:</strong> {user.points || "Not Implemented Yet"}</p>
       </div>
 
       <div className="quiz-history">
@@ -41,9 +45,13 @@ const Profile = () => {
             </tbody>
           </table>
         ) : (
-          <p>No quizzes taken yet.</p>
+          <p>Not Implemented Yet.</p>
         )}
       </div>
+
+      <button onClick={handleSubmit} className=" continue-btn">
+        Home
+      </button>
     </div>
   );
 };

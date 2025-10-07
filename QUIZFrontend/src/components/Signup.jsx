@@ -35,7 +35,7 @@ const Signup = ({ toggleForm }) => {
   return (
     <div className="auth-container">
       <h2>Signup</h2>
-      {error && <p className="error">{error}</p>}
+      {error && <p className="error">{error +" Render server takes wake-up time please try once again or refresh page"}</p>}
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Full Name" value={name} onChange={(e) => setName(e.target.value)} required />
         <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />

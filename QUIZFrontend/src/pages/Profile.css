@@ -68,3 +68,27 @@
 .quiz-history tr:hover {
   background: rgba(156, 90, 245, 0.15);
 }
+
+
+/* Button */
+.continue-btn {
+  padding: 0.8rem 2rem;
+  border: 2px solid #5507d4;
+  background: transparent;
+ 
+  color: #1a0377;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.continue-btn:hover {
+  background: #b78bff;
+  background: radial-gradient(circle at top, #6b27b3 0%, #261048 100%);
+   border: 2px solid #fafafa;
+  color: #faf8fc;
+  box-shadow: 0 0 15px rgba(178, 135, 248, 0.8);
+  transform: translateY(-2px);
+}

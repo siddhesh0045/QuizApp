@@ -49,7 +49,8 @@ const registerUser = async (req, res) => {
       httpOnly: true,
       secure: isProd,
       sameSite: isProd ? "none" : "lax",
-      maxAge: 7 * 24 * 60 * 60 * 1000,
+      maxAge: 3 * 60 * 60 * 1000, // 3 hours
+
     });
 
     res.status(201).json({
@@ -88,7 +89,8 @@ const loginUser = async (req, res) => {
       httpOnly: true,
       secure: isProd,
       sameSite: isProd ? "none" : "lax",
-      maxAge: 7 * 24 * 60 * 60 * 1000,
+     maxAge: 3 * 60 * 60 * 1000, // 3 hours
+
     });
 
     res.status(200).json({
@@ -185,7 +187,32 @@ const getUserById = async () => {};
 const forgotPassword = async () => {};
 const resetPassword = async () => {};
 const updateQuizResult = async () => {};
-const submitFeedback = async () => {};
+
+
+// Submit feedback
+const submitFeedback = async (req, res) => {
+  try {
+    const { name, email, rating, feedback } = req.body;
+
+    if (!name || !email || !rating || !feedback) {
+      return res.status(400).json({ message: "All fields are required" });
+    }
+
+    const newFeedback = await Feedback.create({
+      name,
+      email,
+      rating,
+      feedback,
+    });
+
+    res.status(201).json({ success: true, message: "Feedback submitted successfully", feedback: newFeedback });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Server error while submitting feedback" });
+  }
+};
+
+
 
 module.exports = {
   registerUser,
